@@ -1,0 +1,53 @@
+# Sistema de gestão De Angeli — Etapa 1
+#
+# Dois containers:
+#   app → o site (PHP 8.3 + Apache)
+#   db  → o banco de dados (MariaDB 10.11), NUNCA exposto fora da máquina
+#
+# Subir:   docker compose up -d --build
+# Parar:   docker compose down        (os dados ficam guardados)
+# Logs:    docker compose logs -f app
+services:
+  app:
+    build: .
+    image: deangeli-gestao:etapa1
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      APP_URL: ${APP_URL:-http://localhost:8080}
+      APP_ENV: ${APP_ENV:-producao}
+      DB_HOST: db
+      DB_NAME: ${DB_NAME:-gestao}
+      DB_USER: ${DB_USER:-gestao}
+      DB_PASS: ${DB_PASS:?Defina DB_PASS no arquivo .env}
+      TZ: America/Sao_Paulo
+    ports:
+      # Só aceita conexões da própria máquina. O Nginx do servidor
+      # encaminha o tráfego da internet para esta porta (veja o LEIAME).
+      - "127.0.0.1:${APP_PORT:-8080}:80"
+    volumes:
+      - ./storage:/var/www/app/storage
+
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: ${DB_NAME:-gestao}
+      MARIADB_USER: ${DB_USER:-gestao}
+      MARIADB_PASSWORD: ${DB_PASS:?Defina DB_PASS no arquivo .env}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASS:?Defina DB_ROOT_PASS no arquivo .env}
+      TZ: America/Sao_Paulo
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      - dados-db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    # Sem "ports": o banco só é acessível pelo container do site.
+
+volumes:
+  dados-db:

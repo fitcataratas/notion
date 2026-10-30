@@ -1,0 +1,3037 @@
+[
+ {
+  "titulo": "Atualização do site",
+  "status": "Em andamento",
+  "prioridade": "Baixa",
+  "data_inicio": "2026-07-22",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [
+   "HACKATOUR"
+  ],
+  "responsaveis": [
+   "João Pedro"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Reunião Alinhamento Geral",
+  "status": "Concluído",
+  "prioridade": "Alta",
+  "data_inicio": "2026-07-14",
+  "hora_inicio": "15:30",
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Coordenação"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira",
+   "Gabo Gaona",
+   "Kristen Grignet",
+   "Joaquin",
+   "Jessica Domingues",
+   "Bruna Holanda",
+   "Mayara Angeli",
+   "De Angeli",
+   "jessica@deangelieventos.com",
+   "Ana"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "[ATA DE REUNIÃO DE ALINHAMENTO E PLANEJAMENTO.pdf](../../../attachments/7f829001-1c6e-4a5d-ad57-9f3ac45ef650/ATA_DE_REUNIO_DE_ALINHAMENTO_E_PLANEJAMENTO.pdf)",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Reunião"
+ },
+ {
+  "titulo": "Atualização apresentação institucional",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Atualização apresentação comercial",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Manual do expositor",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Bruna Holanda"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Automatização da planilha de acompanhamento",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Bruna Holanda"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Capa word manual expositor",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Timbrado 2027",
+  "status": "Concluído",
+  "prioridade": "Alta",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Criação de arte “Vendas abertas”",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Bruna Holanda",
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Post"
+ },
+ {
+  "titulo": "Configurar anais forum",
+  "status": "A fazer",
+  "prioridade": "Média",
+  "data_inicio": "2026-07-15",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [
+   "FORUM"
+  ],
+  "responsaveis": [
+   "De Angeli"
+  ],
+  "solicitantes": [
+   "De Angeli"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Levantamento de todas as datas comemorativas",
+  "status": "Concluído",
+  "prioridade": "Alta",
+  "data_inicio": "2026-07-15",
+  "hora_inicio": null,
+  "data_fim": "2026-07-24",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "DE ANGELI",
+   "FITCATARATAS",
+   "FORUM",
+   "HACKATOUR"
+  ],
+  "responsaveis": [
+   "Ana",
+   "Julia Koscrevic"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "Separado por contas, levantar as datas importantes que possam ser comunicadas nas redes sociais.  \n\nFITCataratas: datas relacionadas ao turismo\n\nFórum: relacionadas a pesquisas cientificas, educação, etc\n\nHackatour: Tecnologia, inovação\n\nDe Angeli: Eventos no geral \n\n[https://docs.google.com/spreadsheets/d/1LLNIg7k0Cot5pidEbm6jI6amozf5ak3O72Usjablosc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1LLNIg7k0Cot5pidEbm6jI6amozf5ak3O72Usjablosc/edit?usp=sharing)",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Pesquisa vídeos virais Insta e TikTok",
+  "status": "Concluído",
+  "prioridade": "Alta",
+  "data_inicio": "2026-07-26",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "DE ANGELI",
+   "FITCATARATAS",
+   "FORUM",
+   "HACKATOUR",
+   "IDESTUR",
+   "PAULO ANGELI"
+  ],
+  "responsaveis": [
+   "Ana"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Criação Calendário de Postagens Hackatour",
+  "status": "Em andamento",
+  "prioridade": "Alta",
+  "data_inicio": "2026-07-15",
+  "hora_inicio": null,
+  "data_fim": "2026-07-17",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "HACKATOUR"
+  ],
+  "responsaveis": [
+   "Jessica Domingues",
+   "Raísa Moreira"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Alinhamento Capacitafit",
+  "status": "Em andamento",
+  "prioridade": "Média",
+  "data_inicio": "2026-07-31",
+  "hora_inicio": "10:00",
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Raísa Moreira",
+   "Jessica Domingues",
+   "João Pedro"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "Open edX - plataforma",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "configuração Notion",
+  "status": "Aguardando",
+  "prioridade": "Alta",
+  "data_inicio": "2026-07-16",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "DE ANGELI"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Pegar contatos M. de turismo",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-07-16",
+  "hora_inicio": null,
+  "data_fim": "2026-07-20",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "site do hk",
+  "status": "A fazer",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [
+   "HACKATOUR"
+  ],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Projeto FIT Geek",
+  "status": "Concluído",
+  "prioridade": "Alta",
+  "data_inicio": "2026-07-17",
+  "hora_inicio": null,
+  "data_fim": "2026-07-25",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "DE ANGELI"
+  ],
+  "responsaveis": [
+   "Joaquin",
+   "Gabo Gaona",
+   "Kristen Grignet",
+   "Jessica Domingues",
+   "João Pedro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Folder FITCataratas",
+  "status": "Aguardando",
+  "prioridade": null,
+  "data_inicio": "2026-07-17",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Mayara Angeli"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Fluxograma de solicitações Mkt",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing",
+   "Secretaria"
+  ],
+  "projetos": [
+   "DE ANGELI",
+   "FITCATARATAS",
+   "FORUM",
+   "HACKATOUR",
+   "IDESTUR",
+   "PAULO ANGELI",
+   "REVISTA"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Estratégia p vendas",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Páginas Bases FITCataratas",
+  "status": "A fazer",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Raísa Moreira",
+   "João Pedro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "@Raísa Moreira  o que tem que ter na pagina?",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Landing Page Expositores",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "João Pedro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "@Bruna Holanda o que tem que ter na pagina?",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Reunião Cronograma Geral",
+  "status": "Cancelado",
+  "prioridade": null,
+  "data_inicio": "2026-07-22",
+  "hora_inicio": "10:00",
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Arquitetura",
+   "Caravanas",
+   "Comercial",
+   "Coordenação",
+   "Design",
+   "Marketing",
+   "Secretaria",
+   "TI"
+  ],
+  "projetos": [
+   "DE ANGELI",
+   "FITCATARATAS",
+   "FORUM",
+   "HACKATOUR",
+   "IDESTUR",
+   "PAULO ANGELI",
+   "REVISTA"
+  ],
+  "responsaveis": [
+   "Gabo Gaona",
+   "Joaquin",
+   "Jessica Domingues",
+   "Bruna Holanda",
+   "De Angeli",
+   "Mayara Angeli",
+   "Ana",
+   "marcos@deangelieventos.com"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": "Alinhamento do check-list geral dos eventos",
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Atualização Catalogo Feira",
+  "status": "Em andamento",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design",
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Carrossel instagram FITCataratas",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-07-23",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Marketing"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": "Em criação",
+  "tipo": null
+ },
+ {
+  "titulo": "Disparo e-mail Mkt",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-07-23",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": "2026-07-23",
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Jessica Domingues"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "[https://docs.google.com/document/d/1bCLcPo-Kg88Nw5JBfA6KoTmbr4UwOAfMTQaVhLQ2qDg/edit?usp=sharing](https://docs.google.com/document/d/1bCLcPo-Kg88Nw5JBfA6KoTmbr4UwOAfMTQaVhLQ2qDg/edit?usp=sharing)",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": "Todos",
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Publicação"
+ },
+ {
+  "titulo": "Reunião Elion MKT e De Angeli",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-07-31",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira",
+   "Jessica Domingues",
+   "Mayara Angeli"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Atualizar certificado FIT",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Video tutorial de certifcado",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing",
+   "Secretaria"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Joaquin",
+   "Kristen Grignet"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Emenda SEBRAE",
+  "status": "Concluído",
+  "prioridade": "Alta",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Coordenação"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Relatorio MKT",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "DE ANGELI",
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Mayara Angeli"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Coordenação"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Adesivos FITIGUASSU/HACKATOUR",
+  "status": "Em andamento",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FORUM",
+   "HACKATOUR"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Mayara Angeli"
+  ],
+  "aprovadores": [
+   "Mayara Angeli"
+  ],
+  "setor_solicitante": [
+   "Marketing"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Material Impresso",
+  "etapa_mkt_design": "Em criação",
+  "tipo": null
+ },
+ {
+  "titulo": "Postagem site Festival",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-08-04",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": "2026-08-05",
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "João Pedro"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Marketing"
+  ],
+  "corpo": "@Raísa Moreira  capa da postagem \n\nisso nao ta mais para uma noticia do que blog?\n\nNotícia\n\nproporção 4:3\n\nImagem enviado por whatss",
+  "briefing": null,
+  "conteudo": "Startup idealizada durante o Hackatour lança plataforma de trabalho sob demanda\n\nA startup de Foz do Iguaçu, SHIFITI, lançou uma plataforma digital de trabalho sob demanda para conectar empresas de hospitalidade, gastronomia e serviços a profissionais disponíveis para turnos avulsos.\n\nA ideia nasceu no Hackatour Cataratas, maratona de inovação voltada ao turismo. Depois de vencer a competição, a startup entrou na primeira turma de pré-incubação da UniHub, a pré-incubadora da Unioeste. \"Foi a validação que precisávamos. A SHIFITI nasceu para resolver um problema real: conectar empresa e profissional no momento certo\", diz o fundador e CEO, Welington Aguiar.\n\nSó na Tríplice Fronteira, o mercado reúne mais de 110 hotéis e 600 estabelecimentos comerciais, além de uma procura cada vez maior por mão de obra flexível. O funcionamento lembra o das grandes plataformas de economia compartilhada. O trabalhador escolhe os turnos conforme a disponibilidade, e empresa e profissional se avaliam ao fim de cada serviço. Saiba mais em www.shifiti.app.",
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Outro",
+  "etapa_mkt_design": "Nova solicitação",
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Mapa densidade demografica",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Alterar Mapa",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-08-04",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Comercial"
+  ],
+  "corpo": "Alterar o mapa atual substituindo as cores da marcação da metragem por números\n\nSeguir exemplo da imagem abaixo\n\n![image.png](../../../attachments/14594efa-08f3-4599-86ea-623d40ad290c/image.png)",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Nichar Mapa Festival",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Catalogo Montadora",
+  "status": "Em andamento",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Mailing Exprotel",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Apresentação CAPACITAFIT",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-08-05",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Jessica Domingues",
+   "Raísa Moreira",
+   "João Pedro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "[Programa Permanente de Capacitação.pdf_compressed.pdf](../../../attachments/75626fcb-eff0-4655-8010-9fecff816738/Programa_Permanente_de_Capacitao%20pdf_compressed.pdf)\n\n[]()",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "E-mail marketing Certificado",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-08-06",
+  "hora_inicio": null,
+  "data_fim": "2026-08-07",
+  "prazo_solicitado": null,
+  "data_publicacao": "2026-08-06",
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "João Pedro"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Marketing"
+  ],
+  "corpo": "Assunto: Seu certificado do FITCataratas 2026 está disponível\n\n[]()",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Arte tutorial certificado",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-08-06",
+  "hora_inicio": null,
+  "data_fim": "2026-08-07",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "Quer emitir o seu certificado do FITCataratas? É muito simples!\n\nAcesse o site [eventspro.com.br](http://eventspro.com.br/)\n\nClique nas barras localizadas no canto superior esquerdo da tela.\n\nDepois, selecione Consultar Ingressos. E em seguida, Eventos Anteriores.\n\nLocalize o FITCataratas e clique em Acessar Evento.\n\nAgora, é só clicar em Certificado para visualizar e baixar o seu.\n\nE pronto! Você já tem o certificado do Festival que conecta negócios, turismo e, principalmente, pessoas!",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Email Marketing",
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Mapa Densidade Site",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing",
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona",
+   "João Pedro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "o que seria isso?",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Convite secretario de Turismo",
+  "status": "Aguardando",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Coordenação"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Arte mês - valor",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Artes vendas abertas",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": "2026-08-21",
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Comercial"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Post"
+ },
+ {
+  "titulo": "Captação app Shifiti",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-08-07",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "HACKATOUR",
+   "PAULO ANGELI"
+  ],
+  "responsaveis": [
+   "Kristen Grignet"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Reels"
+ },
+ {
+  "titulo": "Captação Reels FITCataratas",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-07-24",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Kristen Grignet",
+   "Bruna Holanda"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Captação bate bola Paulo",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-08-11",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "DE ANGELI",
+   "PAULO ANGELI"
+  ],
+  "responsaveis": [
+   "Kristen Grignet"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Reels",
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Loja Online",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Jessica Domingues",
+   "João Pedro"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "Definir o prazo final de entrega",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Solicitação matéria Vacy",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-08-11",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "Hotelaria de Foz do Iguaçu tem melhor julho da história\n\nEm julho de 2026, a rede hoteleira de Foz do Iguaçu registrou o melhor desempenho da série histórica recente, com 83% de ocupação média. O índice, calculado pela Divisão de Estatísticas e Estudos Turísticos da Secretaria Municipal de Turismo, superou os resultados de julho dos anos anteriores: 76% em 2025, 74% em 2024, 76% em 2023 e 73% em 2022. Foi a primeira vez que a hotelaria local ultrapassou a marca de 80% desde o início da série após a pandemia.\n\nO desempenho também foi positivo entre os diferentes tipos de hospedagem. As pousadas alcançaram 85% de ocupação, enquanto os hotéis chegaram a 83%. Na comparação entre as duas quinzenas do mês, a segunda metade de julho apresentou resultado ainda mais expressivo, com 88% de ocupação, contra 81% na primeira quinzena. O levantamento contou com a participação de 95 meios de hospedagem, representando uma parcela significativa da rede hoteleira do município.\n\nO resultado acima das expectativas demonstra a capacidade do município de atrair visitantes e manter um fluxo elevado mesmo fora dos grandes feriados, contribuindo para um desempenho consistente da atividade turística durante o período de férias de julho.",
+  "briefing": "https://www.h2foz.com.br/turismo/hotelaria-foz-do-iguacu-julho-2026/",
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Logomarca FIT Indica",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-08-12",
+  "hora_inicio": null,
+  "data_fim": "2026-08-31",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": "Rede social com dicas da fronteira",
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Plano de patrocinio",
+  "status": "Em andamento",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Igaratype FITCATARATAS",
+  "status": "Aguardando",
+  "prioridade": "Baixa",
+  "data_inicio": "2026-08-13",
+  "hora_inicio": null,
+  "data_fim": "2026-09-14",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Ana"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Comercial"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Outro",
+  "etapa_mkt_design": "Nova solicitação",
+  "tipo": null
+ },
+ {
+  "titulo": "Apresentação Hackatour 2026.2",
+  "status": "Em andamento",
+  "prioridade": null,
+  "data_inicio": "2026-08-13",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [
+   "Elaine da Luz",
+   "Jessica Domingues"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Coordenação"
+  ],
+  "corpo": "[2026.2HackatourCatratas-TurismoInteligente.docx.pdf](../../../attachments/d481830a-cf8c-4477-b31b-09bc6d7fdf85/2026%202HackatourCatratas-TurismoInteligente%20docx.pdf)",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Apresentação",
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Ajustar site De Angeli",
+  "status": "A fazer",
+  "prioridade": "Média",
+  "data_inicio": "2026-08-13",
+  "hora_inicio": null,
+  "data_fim": "2026-08-20",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira",
+   "João Pedro"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Marketing"
+  ],
+  "corpo": "",
+  "briefing": "Alimentar com mais informações",
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Tabular pesquisa de satisfação",
+  "status": "Em andamento",
+  "prioridade": null,
+  "data_inicio": "2026-08-14",
+  "hora_inicio": null,
+  "data_fim": "2026-08-17",
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": "Extrair da pesquisa de satisfação geral do Festival informações importantes para elaboração do plano de 2027",
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": "https://docs.google.com/forms/d/1gE8EjMRIgfQrOCD5PE8AomO_EYmqRSL0CnciPr2jBqw/edit?pli=1#question=1308319050&field=633224966",
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Ajuste midia kit",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design",
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Atualizar assinatura de e-mail",
+  "status": "Aguardando",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design",
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Captação Museu Foz Cars",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": "2026-08-25",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": "2026-08-26",
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [
+   "FITCATARATAS"
+  ],
+  "responsaveis": [
+   "Kristen Grignet"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Reels"
+ },
+ {
+  "titulo": "E-mail marketing co-expositores",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira"
+  ],
+  "solicitantes": [],
+  "aprovadores": [
+   "Bruna Holanda"
+  ],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": "E-mail marketing para a segmentação de co-expositores dando motivos do porque eles devem ter um estande próprio na Feira",
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": "Prospecção de novos expositores",
+  "observacoes_solicitante": "1 semana após o lançamento das vendas",
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Midia Kit do Festival/Feira",
+  "status": "A fazer",
+  "prioridade": "Alta",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": "2026-09-28",
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira",
+   "Bruna Holanda",
+   "Mayara Angeli"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "POP Comercial",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Captação MMC + reunião",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-08-27",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Kristen Grignet",
+   "Raísa Moreira"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Reunião"
+ },
+ {
+  "titulo": "Automação DM",
+  "status": "Aguardando",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Montar uma carta convite para palestrante",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Incluir aba IDEIAS no cronograma de postagens",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira",
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [
+   "Joaquin"
+  ],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Criar ABA Vacy",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira",
+   "Joaquin"
+  ],
+  "solicitantes": [],
+  "aprovadores": [
+   "Joaquin"
+  ],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Montar estratégia ABAV",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": "2026-09-25",
+  "data_publicacao": null,
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Ajuste capa manuais",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design",
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Outro",
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "(Ideia) Cases de sucesso do Hackatour no site",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "João Pedro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Lembrete: Atualização do cartão de identificação de Autoridade para Solenidade de Abertura.",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": "2026-09-08",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Gabo Gaona",
+   "Mayara Angeli",
+   "Raísa Moreira"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Inserir perguntas em espanhol na pesquisa dos agentes de viagem",
+  "status": "Concluído",
+  "prioridade": "Média",
+  "data_inicio": "2026-09-10",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": "2026-09-11",
+  "data_publicacao": null,
+  "setores": [
+   "Secretaria"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Joaquin"
+  ],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "[https://admin.typeform.com/form/viTa8JDP/create?block=fa1863b4-438d-41cb-9eb0-b85969bddf23](https://admin.typeform.com/form/viTa8JDP/create?block=fa1863b4-438d-41cb-9eb0-b85969bddf23)",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Arte Camiseta Dia Mundial do Turismo",
+  "status": "A fazer",
+  "prioridade": "Alta",
+  "data_inicio": "2026-09-15",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Design",
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [
+   "Raísa Moreira"
+  ],
+  "aprovadores": [
+   "Gabo Gaona"
+  ],
+  "setor_solicitante": [
+   "Marketing"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": "Tarefa"
+ },
+ {
+  "titulo": "Atualizar forms de hoteis e atrativos conveniados",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Automação RD Station",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "João Pedro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Atualizar CRM",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Milena de Moraes"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [
+   "Bruna Holanda"
+  ],
+  "setor_solicitante": [],
+  "corpo": "[Prospecção ](Atualizar%20CRM/Prospec%C3%A7%C3%A3o%203b969bc4790b80e49e7ed3bbd361ce2f.md)\n\n--- Subpágina: Prospecção ---\n",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Ajustar o guia da proposta",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Bruna Holanda"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [
+   "Bruna Holanda"
+  ],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Atualizar formulário de envio das artes",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Mailing Mtur",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "E-mail marketing",
+  "status": "A fazer",
+  "prioridade": "Alta",
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": "2026-09-28",
+  "setores": [
+   "Marketing"
+  ],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Comercial"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": "Venda",
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": "Email Marketing",
+  "etapa_mkt_design": "Nova solicitação",
+  "tipo": null
+ },
+ {
+  "titulo": "teste",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Matéria Vendas Abertas FIT 2027",
+  "status": "Concluído",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Vacy Alvaro"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [],
+  "setor_solicitante": [
+   "Comercial"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "FIT antecipa inscriçoes para agentes com foco em capacitação durante o ano inteiro e abre vendas de estandes",
+  "status": "Cancelado",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": "2026-09-29",
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Vacy Alvaro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "FITCataratas no IGUfest",
+  "status": "Cancelado",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Vacy Alvaro"
+  ],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Criar COMUNIDADE FIT WHATSAPP",
+  "status": "A fazer",
+  "prioridade": "Alta",
+  "data_inicio": "2026-09-28",
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": "2026-09-28",
+  "data_publicacao": null,
+  "setores": [],
+  "projetos": [],
+  "responsaveis": [
+   "Raísa Moreira",
+   "Bruna Holanda"
+  ],
+  "solicitantes": [
+   "Bruna Holanda"
+  ],
+  "aprovadores": [
+   "Raísa Moreira"
+  ],
+  "setor_solicitante": [
+   "Comercial"
+  ],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Lista de todas as companhias aereas",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "Comercial"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ },
+ {
+  "titulo": "Ataulizar texto Blog",
+  "status": "A fazer",
+  "prioridade": null,
+  "data_inicio": null,
+  "hora_inicio": null,
+  "data_fim": null,
+  "prazo_solicitado": null,
+  "data_publicacao": null,
+  "setores": [
+   "TI"
+  ],
+  "projetos": [],
+  "responsaveis": [],
+  "solicitantes": [],
+  "aprovadores": [],
+  "setor_solicitante": [],
+  "corpo": "",
+  "briefing": null,
+  "conteudo": null,
+  "formato_especificacoes": null,
+  "objetivo_peca": null,
+  "observacoes_solicitante": null,
+  "pasta_materiais": null,
+  "publico_alvo": null,
+  "referencias": null,
+  "tipo_material": null,
+  "etapa_mkt_design": null,
+  "tipo": null
+ }
+]
