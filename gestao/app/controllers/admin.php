@@ -277,7 +277,7 @@ Router::add('POST', '/admin/inicio', function (array $p, array $u) {
 
 // ------------------------------------------------------------------ histórico
 Router::add('GET', '/admin/historico', function (array $p, array $u) {
-    $ent = in_array($_GET['entidade'] ?? '', ['tarefa', 'usuario', 'setor', 'projeto', 'configuracao', 'pagina', 'postagem', 'blog', 'reuniao'], true) ? $_GET['entidade'] : '';
+    $ent = in_array($_GET['entidade'] ?? '', ['tarefa', 'usuario', 'setor', 'projeto', 'configuracao', 'pagina', 'postagem', 'blog', 'reuniao', 'editorial'], true) ? $_GET['entidade'] : '';
     $linhas = Db::all(
         'SELECT * FROM audit_log ' . ($ent ? 'WHERE entity = ? ' : '') . 'ORDER BY id DESC LIMIT 300',
         $ent ? [$ent] : []

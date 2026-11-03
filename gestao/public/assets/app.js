@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var arrastado = null;
   document.addEventListener('dragstart', function (ev) {
-    var el = ev.target.closest && ev.target.closest('.evt[data-api], .cartao-tarefa[data-acao]');
+    var el = ev.target.closest && ev.target.closest('.evt[data-api], .ed-post[data-api], .cartao-tarefa[data-acao]');
     if (!el) { return; }
     arrastado = el;
     el.classList.add('arrastando');
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('dragover', function (ev) {
     if (!arrastado) { return; }
     var alvo = arrastado.hasAttribute('data-api')
-      ? ev.target.closest('.cal-dia[data-dia]')
+      ? ev.target.closest('.cal-dia[data-dia], .ed-cel[data-dia]')
       : ev.target.closest('[data-mover-campo] .coluna');
     if (!alvo) { return; }
     ev.preventDefault();
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var el = arrastado;
 
     if (el.hasAttribute('data-api')) {                       // calendário: muda o dia
-      var dia = ev.target.closest('.cal-dia[data-dia]');
+      var dia = ev.target.closest('.cal-dia[data-dia], .ed-cel[data-dia]');
       if (!dia) { return; }
       ev.preventDefault();
       var de = el.getAttribute('data-dia'), para = dia.getAttribute('data-dia');

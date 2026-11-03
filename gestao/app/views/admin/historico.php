@@ -2,7 +2,7 @@
 <form method="get" action="/admin/historico" class="filtros">
   <select name="entidade" aria-label="Tipo de registro">
     <option value="">Tudo</option>
-    <?php foreach (['tarefa' => 'Tarefas', 'usuario' => 'Usuários e acessos', 'setor' => 'Setores', 'projeto' => 'Projetos', 'configuracao' => 'Configurações', 'pagina' => 'Páginas e links dos setores', 'postagem' => 'Cronograma de postagens', 'blog' => 'Blog (ideias e pautas)', 'reuniao' => 'Reuniões'] as $k => $r): ?>
+    <?php foreach (['tarefa' => 'Tarefas', 'usuario' => 'Usuários e acessos', 'setor' => 'Setores', 'projeto' => 'Projetos', 'configuracao' => 'Configurações', 'pagina' => 'Páginas e links dos setores', 'postagem' => 'Cronograma de postagens', 'blog' => 'Blog (ideias e pautas)', 'reuniao' => 'Reuniões', 'editorial' => 'Dashboard Editorial'] as $k => $r): ?>
       <option value="<?= e($k) ?>"<?= $ent === $k ? ' selected' : '' ?>><?= e($r) ?></option>
     <?php endforeach; ?>
   </select>

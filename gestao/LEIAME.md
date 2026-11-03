@@ -1,8 +1,16 @@
-# Gestão De Angeli — Etapas 1 a 5 (versão 1.6)
+# Gestão De Angeli — Etapas 1 a 5 (versão 1.7)
 
 Sistema próprio para substituir o Notion: login por e-mail e senha, Central de Tarefas
 (quadro, tabela, calendário e "Minhas tarefas"), setores, projetos e histórico de alterações.
 As 88 tarefas do Notion já vêm prontas para importar.
+
+**Novidades da versão 1.7:**
+- **Dashboard Editorial** (menu Marketing): quadro de produção de conteúdo, separado do Cronograma de Postagens.
+  Cada conteúdo passa por Ideia, Roteiro, Produção, Aprovação, Agendado e Publicado, com perfil (FITCataratas, Hackatour…),
+  rede, formato, data e responsável. Visões **Semana** (arraste o cartão para outro dia) e **Lista** (muda o status direto),
+  contadores por status, filtros e destaque dos atrasados. Quem é marcado como responsável recebe notificação.
+  Só equipe e administradores veem. Os perfis (as linhas do quadro) só o administrador cria, edita e remove, em
+  Administração → "Editorial: perfis". Os 8 perfis já vêm cadastrados; sem comando de importação.
 
 **Novidades da versão 1.6 (telas mais dinâmicas, sem mudar nada de lugar):**
 - **Arrastar no calendário**: nos calendários de Tarefas, Postagens e Reuniões, arraste o cartão para outro dia e a data muda

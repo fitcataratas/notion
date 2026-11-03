@@ -41,3 +41,14 @@ Router::add('POST', '/api/reunioes/(?P<id>\d+)/data', function (array $p, array 
     Audit::registrar('editar', 'reuniao', (int) $p['id'], 'Mudou a data de "' . $t['title'] . '" no calendário', ['Data' => [$t['meeting_date'] ? data_br($t['meeting_date']) : '—', data_br($para)]], $u);
     View::json(['ok' => true, 'mensagem' => 'Reunião movida para ' . data_br($para) . '.']);
 }, ['papel' => 'equipe', 'api' => true]);
+
+Router::add('POST', '/api/editorial/(?P<id>\d+)/data', function (array $p, array $u) use ($lerDias) {
+    [, $para] = $lerDias();
+    $t = Db::one('SELECT title, pub_date FROM editorial_posts WHERE id = ?', [(int) $p['id']]);
+    if (!$t) {
+        View::json(['erro' => 'Conteúdo não encontrado.'], 404);
+    }
+    Db::run('UPDATE editorial_posts SET pub_date = ? WHERE id = ?', [$para, (int) $p['id']]);
+    Audit::registrar('editar', 'editorial', (int) $p['id'], 'Mudou a data de "' . $t['title'] . '" no quadro', ['Data' => [data_br($t['pub_date']), data_br($para)]], $u);
+    View::json(['ok' => true, 'mensagem' => 'Conteúdo movido para ' . data_br($para) . '.']);
+}, ['papel' => 'equipe', 'api' => true]);
