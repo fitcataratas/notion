@@ -31,10 +31,9 @@ $acao = $id ? "/postagens/$id" : '/postagens';
     <input type="text" name="title" value="<?= e($val('title')) ?>" required maxlength="255" autofocus placeholder="Nome da postagem">
   </label>
 
-  <div class="linha tres">
+  <div class="linha dois">
     <label>Data de Postagem<input type="date" name="post_date" value="<?= e($val('post_date')) ?>"></label>
     <label>Situação do post<select name="status_id"><?= $opts('status_id', $listas['situacao']) ?></select></label>
-    <label>Formato<select name="format_id"><?= $opts('format_id', $listas['formato']) ?></select></label>
   </div>
   <div class="linha dois">
     <label>Projeto<select name="project_id"><?= $opts('project_id', $listas['projeto']) ?></select></label>
@@ -42,6 +41,7 @@ $acao = $id ? "/postagens/$id" : '/postagens';
   </div>
   <label>Objetivo <small>(resumido)</small><input type="text" name="objective" value="<?= e($val('objective')) ?>" maxlength="255"></label>
 
+  <fieldset><legend>Formato <small>(pode marcar mais de um)</small></legend><?= $marcas('formatos', $listas['formato'], $v['_formatos'] ?? [], true) ?></fieldset>
   <fieldset><legend>Plataforma <small>(pode marcar mais de uma)</small></legend><?= $marcas('plataformas', $listas['plataforma'], $v['_plataformas'] ?? [], true) ?></fieldset>
   <fieldset><legend>Profissional</legend><?= $marcas('pessoas', $pessoas, $v['_pessoas'] ?? [], false) ?></fieldset>
 

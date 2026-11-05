@@ -4,7 +4,7 @@ declare(strict_types=1);
 define('APP_ROOT', dirname(__DIR__));
 define('VIEWS', APP_ROOT . '/app/views');
 
-foreach (['Env', 'Db', 'Config', 'helpers', 'Csrf', 'Audit', 'Auth', 'Perm', 'View', 'Router', 'Tarefas', 'Usuarios', 'Imagem', 'Aparencia', 'Setores', 'Postagens', 'Blog', 'Notificacoes', 'Reunioes', 'Institucional', 'Editorial'] as $arq) {
+foreach (['Env', 'Db', 'Config', 'helpers', 'Csrf', 'Audit', 'Auth', 'Perm', 'View', 'Router', 'Tarefas', 'Usuarios', 'Imagem', 'Aparencia', 'Setores', 'Postagens', 'Blog', 'Notificacoes', 'Reunioes', 'Institucional', 'Avisos'] as $arq) {
     require_once APP_ROOT . "/app/src/$arq.php";
 }
 

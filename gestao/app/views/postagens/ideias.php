@@ -1,6 +1,7 @@
 <?php /** @var array $ideias @var bool $todas */ ?>
 <div class="barra-visoes">
   <nav class="abas" aria-label="Cronograma">
+    <a href="/postagens?view=semana">Dashboard semanal</a>
     <a href="/postagens?view=tabela">Tabela</a>
     <a href="/postagens?view=calendario">Calendário de Postagens</a>
     <a href="/ideias" aria-current="page">Ideias de Conteúdo</a>

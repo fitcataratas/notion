@@ -275,6 +275,29 @@ Router::add('POST', '/admin/inicio', function (array $p, array $u) {
     redirect('/admin/inicio');
 }, ['papel' => 'admin']);
 
+Router::add('POST', '/admin/avisos', function (array $p, array $u) {
+    $pagina = (string) ($_POST['pagina'] ?? '');
+    $ok = $pagina !== '' && Avisos::chave($pagina === 'inicio' ? '/' : (str_starts_with($pagina, 'setor-') ? '/setores/' . substr($pagina, 6) : '/' . $pagina)) === $pagina && Avisos::criar($pagina, $_POST, $u);
+    $ok ? flash('Aviso adicionado.') : flash('Escreva o texto do aviso.', 'erro');
+    redirect(volta_segura($_POST['volta'] ?? '/'));
+}, ['papel' => 'admin']);
+
+Router::add('POST', '/admin/avisos/(?P<id>\d+)', function (array $p, array $u) {
+    Avisos::salvar((int) $p['id'], $_POST, $u) ? flash('Aviso salvo.') : View::naoEncontrado();
+    redirect(volta_segura($_POST['volta'] ?? '/'));
+}, ['papel' => 'admin']);
+
+Router::add('POST', '/admin/avisos/(?P<id>\d+)/excluir', function (array $p, array $u) {
+    Avisos::excluir((int) $p['id'], $u) ? flash('Aviso apagado.') : View::naoEncontrado();
+    redirect(volta_segura($_POST['volta'] ?? '/'));
+}, ['papel' => 'admin']);
+
+Router::add('POST', '/admin/blog-aviso', function (array $p, array $u) {
+    Institucional::salvarAvisoBlog($_POST, $u);
+    flash('Aviso do Blog atualizado.');
+    redirect('/blog');
+}, ['papel' => 'admin']);
+
 // ------------------------------------------------------------------ histórico
 Router::add('GET', '/admin/historico', function (array $p, array $u) {
     $ent = in_array($_GET['entidade'] ?? '', ['tarefa', 'usuario', 'setor', 'projeto', 'configuracao', 'pagina', 'postagem', 'blog', 'reuniao', 'editorial'], true) ? $_GET['entidade'] : '';

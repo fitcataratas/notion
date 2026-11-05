@@ -3,7 +3,7 @@
 $volta = $_SERVER['REQUEST_URI'] ?? '/blog';
 $totalIdeias = array_sum(array_map('count', $colunas));
 ?>
-<div class="aviso-segunda">PUBLICAÇÃO TODA SEGUNDA! Só preencher a “Data de Publicação”!</div>
+<?php $lugar = 'topo'; include __DIR__ . '/_aviso.php'; ?>
 
 <h2 class="titulo-secao">Banco de Ideias</h2>
 <div class="cabeca-pagina cabeca-flex">
@@ -24,6 +24,7 @@ $totalIdeias = array_sum(array_map('count', $colunas));
 </div>
 <p class="suave"><?= $pode_avaliar ? 'Mova a ideia de coluna para avaliar: ao ir para Aprovado a pauta nasce sozinha; Cancelado e Publicado atualizam a pauta.' : 'Qualquer pessoa da equipe cadastra ideias. Quem avalia é a Coordenação.' ?> (<?= (int) $totalIdeias ?> ideias)</p>
 
+<?php $lugar = 'ideias'; include __DIR__ . '/_aviso.php'; ?>
 <div class="quadro-pedidos quadro-blog" data-mover-campo="avaliacao">
   <?php foreach ($colunas as $av => $itens): ?>
     <section class="coluna" data-valor="<?= e($av) ?>" aria-label="<?= e($av) ?>">
@@ -50,6 +51,7 @@ $totalIdeias = array_sum(array_map('count', $colunas));
   <?php endforeach; ?>
 </div>
 
+<?php $lugar = 'pautas'; include __DIR__ . '/_aviso.php'; ?>
 <h2 class="titulo-secao">Pautas</h2>
 <div class="cabeca-pagina cabeca-flex">
   <form method="get" action="/blog" class="filtros">
@@ -92,3 +94,4 @@ $totalIdeias = array_sum(array_map('count', $colunas));
   </tbody>
 </table>
 </div>
+<?php $lugar = 'fim'; include __DIR__ . '/_aviso.php'; ?>

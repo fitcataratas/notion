@@ -11,6 +11,49 @@ final class Institucional
         return (string) Db::value('SELECT v FROM settings WHERE k = ?', [$chave]);
     }
 
+    public const BLOG_AVISO_PADRAO = 'PUBLICAÇÃO TODA SEGUNDA! Só preencher a “Data de Publicação”!';
+
+    public const AVISO_CORES = ['#c98a00' => 'Amarelo', '#dd6b20' => 'Laranja', '#c0392b' => 'Vermelho', '#d53f8c' => 'Rosa',
+        '#6b46c1' => 'Roxo', '#2b6cb0' => 'Azul', '#167a3b' => 'Verde', '#5f6b63' => 'Cinza'];
+    public const AVISO_POSICOES = ['topo' => 'No topo da página', 'ideias' => 'Entre o Banco de Ideias e as colunas',
+        'pautas' => 'Antes das Pautas', 'fim' => 'No fim da página'];
+
+    /** Aviso do Blog (texto, cor, lugar). Nunca editado → texto padrão; salvo em branco → não aparece. */
+    public static function avisoBlog(): string
+    {
+        return self::avisoBlogDados()['texto'];
+    }
+
+    public static function avisoBlogDados(): array
+    {
+        $m = [];
+        foreach (Db::all("SELECT k, v FROM settings WHERE k IN ('blog_aviso','blog_aviso_cor','blog_aviso_pos','blog_aviso_pauta')") as $r) {
+            $m[$r['k']] = $r['v'];
+        }
+        return [
+            'texto' => array_key_exists('blog_aviso', $m) && $m['blog_aviso'] !== null ? (string) $m['blog_aviso'] : self::BLOG_AVISO_PADRAO,
+            'cor' => cor_valida($m['blog_aviso_cor'] ?? null, '#c98a00'),
+            'pos' => isset(self::AVISO_POSICOES[$m['blog_aviso_pos'] ?? '']) ? $m['blog_aviso_pos'] : 'topo',
+            'na_pauta' => ($m['blog_aviso_pauta'] ?? '1') !== '0',
+        ];
+    }
+
+    public static function salvarAvisoBlog(array $in, array $u): void
+    {
+        $cor = ($in['cor'] ?? '') === 'outra' ? ($in['cor_outra'] ?? '') : ($in['cor'] ?? '');
+        $pos = isset(self::AVISO_POSICOES[$in['pos'] ?? '']) ? $in['pos'] : 'topo';
+        $linhas = [
+            'blog_aviso' => mb_substr(trim((string) ($in['texto'] ?? '')), 0, 300),
+            'blog_aviso_cor' => cor_valida((string) $cor, '#c98a00'),
+            'blog_aviso_pos' => $pos,
+            'blog_aviso_pauta' => empty($in['na_pauta']) ? '0' : '1',
+        ];
+        foreach ($linhas as $k => $v) {
+            Db::run('INSERT INTO settings (k, v) VALUES (?, ?) ON DUPLICATE KEY UPDATE v = VALUES(v)', [$k, $v]);
+        }
+        Audit::registrar('editar', 'configuracao', null, 'Alterou o aviso do Post - Blog', null, $u);
+    }
+
     public static function salvarTextos(array $in, array $u): void
     {
         $limites = ['missao' => 2000, 'visao' => 2000, 'valores' => 2000, 'quem_faz_aviso' => 1000, 'externo_intro' => 2000, 'datas_importantes' => 2000];

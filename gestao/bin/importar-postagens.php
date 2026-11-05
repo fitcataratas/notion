@@ -64,10 +64,13 @@ try {
             echo '  ' . $x['titulo'] . ': ficou o projeto ' . $projs[0] . '; os outros foram anotados no conteúdo.' . "\n";
         }
         Db::run(
-            'INSERT INTO posts (title, post_date, project_id, type_id, format_id, status_id, objective, content) VALUES (?,?,?,?,?,?,?,?)',
-            [$x['titulo'], $x['data'], $opcao('projeto', $x['projeto']), $opcao('tipo', $x['tipo']), $opcao('formato', $x['formato']), $opcao('situacao', $x['situacao']), $x['objetivo'], $x['conteudo']]
+            'INSERT INTO posts (title, post_date, project_id, type_id, status_id, objective, content) VALUES (?,?,?,?,?,?,?)',
+            [$x['titulo'], $x['data'], $opcao('projeto', $x['projeto']), $opcao('tipo', $x['tipo']), $opcao('situacao', $x['situacao']), $x['objetivo'], $x['conteudo']]
         );
         $id = Db::insertId();
+        if ($opcao('formato', $x['formato'])) {
+            Db::run('INSERT IGNORE INTO post_formats (post_id, option_id) VALUES (?,?)', [$id, $opcao('formato', $x['formato'])]);
+        }
         foreach (array_unique(array_map(fn($n) => $opcao('plataforma', $n), $x['plataformas'])) as $oid) {
             if ($oid) {
                 Db::run('INSERT IGNORE INTO post_platforms (post_id, option_id) VALUES (?,?)', [$id, $oid]);

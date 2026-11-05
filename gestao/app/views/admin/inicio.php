@@ -18,6 +18,15 @@
     <label>Texto<textarea name="quem_faz_aviso" rows="3" maxlength="1000"><?= e($t['quem_faz_aviso']) ?></textarea></label>
   </section>
   <section class="cartao estreito">
+    <h2>Avisos e textos em qualquer página</h2>
+    <p class="suave">Em cada página (Início, Tarefas, Cronograma, Reuniões, Setores…) aparece, só para administradores, o botão “+ Adicionar aviso ou texto”.
+    Lá você escolhe o texto, a cor, se é faixa colorida ou texto simples e se fica no topo ou no fim. Para mudar ou apagar, use “✎ Editar” no próprio aviso.</p>
+  </section>
+  <section class="cartao estreito">
+    <h2>Aviso do Post - Blog</h2>
+    <p class="suave">O texto, a cor e o lugar do aviso se editam direto na página <a href="/blog">Post - Blog</a>, no botão “Editar aviso”.</p>
+  </section>
+  <section class="cartao estreito">
     <h2>Texto de boas-vindas para quem é externo</h2>
     <p class="suave">Aparece na página “Meu espaço” de parceiros e prestadores (como a Vacy).</p>
     <label>Texto<textarea name="externo_intro" rows="4" maxlength="2000"><?= e($t['externo_intro']) ?></textarea></label>

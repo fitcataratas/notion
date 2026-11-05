@@ -51,7 +51,6 @@ $recentes = $usuario ? Notificacoes::recentes((int) $usuario['id'], 8) : [];
         <div class="grupo">Marketing</div>
         <a href="/postagens"<?= $ativo('/postagens') ?>><span class="ico">▥</span> Cronograma de Postagens</a>
         <a href="/ideias"<?= $ativo('/ideias') ?>><span class="ico">✧</span> Ideias de Conteúdo</a>
-        <a href="/editorial"<?= $ativo('/editorial') ?>><span class="ico">▦</span> Dashboard Editorial</a>
         <a href="/blog"<?= $ativo('/blog') ?>><span class="ico">✎</span> Post - Blog</a>
         <div class="grupo">Equipe</div>
         <a href="/reunioes"<?= $ativo('/reunioes') ?>><span class="ico">☷</span> Reuniões</a>
@@ -73,7 +72,6 @@ $recentes = $usuario ? Notificacoes::recentes((int) $usuario['id'], 8) : [];
         <a href="/admin/setores"<?= $ativo('/admin/setores') ?>><span class="ico">◧</span> Setores</a>
         <a href="/admin/projetos"<?= $ativo('/admin/projetos') ?>><span class="ico">◨</span> Projetos</a>
         <a href="/admin/quem-faz"<?= $ativo('/admin/quem-faz') ?>><span class="ico">☺</span> Quem faz o quê: editar</a>
-        <a href="/admin/editorial"<?= $ativo('/admin/editorial') ?>><span class="ico">▥</span> Editorial: perfis</a>
         <a href="/admin/postagens"<?= $ativo('/admin/postagens') ?>><span class="ico">▥</span> Cronograma: listas</a>
         <a href="/admin/aparencia"<?= $ativo('/admin/aparencia') ?>><span class="ico">✦</span> Aparência</a>
         <a href="/admin/inicio"<?= $ativo('/admin/inicio') ?>><span class="ico">✎</span> Página inicial e textos</a>
@@ -119,7 +117,10 @@ $recentes = $usuario ? Notificacoes::recentes((int) $usuario['id'], 8) : [];
       <?php foreach (flash() ?? [] as $f): ?>
         <div class="aviso <?= e($f['tipo']) ?>" role="status"><?= e($f['msg']) ?></div>
       <?php endforeach; ?>
+      <?php $pagina = Avisos::chave($caminho); ?>
+      <?php if ($pagina) { $lugar = 'topo'; include VIEWS . '/_avisos.php'; } ?>
       <?= $conteudo ?>
+      <?php if ($pagina) { $lugar = 'fim'; include VIEWS . '/_avisos.php'; } ?>
     </main>
   </div>
 </div>

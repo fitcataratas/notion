@@ -107,7 +107,16 @@ $volta = $_SERVER['REQUEST_URI'] ?? '/tarefas';
     <?php foreach ($linhas as $t): ?>
       <tr>
         <td class="col-titulo"><a href="/tarefas/<?= (int) $t['id'] ?>?<?= e(http_build_query(['volta' => $volta])) ?>"><?= e($t['title']) ?></a></td>
-        <td><?= chip_status($t['status']) ?></td>
+        <td>
+          <?php if (!$ehExterno): ?>
+          <form method="post" action="/tarefas/<?= (int) $t['id'] ?>/status" data-auto>
+            <?= Csrf::campo() ?><input type="hidden" name="volta" value="<?= e($volta) ?>">
+            <select name="status" class="sel-chip st-<?= e(slug($t['status'])) ?>" aria-label="Status de <?= e($t['title']) ?>">
+              <?php foreach (Config::STATUS as $stt): ?><option<?= $stt === $t['status'] ? ' selected' : '' ?>><?= e($stt) ?></option><?php endforeach; ?>
+            </select>
+          </form>
+          <?php else: ?><?= chip_status($t['status']) ?><?php endif; ?>
+        </td>
         <td class="nowrap<?= tarefa_atrasada($t, $hoje) ? ' alerta' : '' ?>"><?= e(data_tarefa($t)) ?></td>
         <td><?php foreach ($t['setores'] as $x): ?><?= chip($x['name'], $x['color']) ?> <?php endforeach; ?></td>
         <td><?php foreach ($t['responsaveis'] as $pp): ?><span class="pessoa"><?= avatar_html($pp, 'peq') ?><?= e($pp['name']) ?></span> <?php endforeach; ?></td>

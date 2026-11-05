@@ -7,7 +7,7 @@ final class Postagens
     /** Listas editáveis pelo administrador: chave => [rótulo, rótulo no singular, coluna em posts]. */
     public const LISTAS = [
         'situacao'   => ['Situação do post', 'situação', 'status_id'],
-        'formato'    => ['Formato', 'formato', 'format_id'],
+        'formato'    => ['Formato', 'formato', null],
         'projeto'    => ['Projeto', 'projeto', 'project_id'],
         'tipo'       => ['Tipo', 'tipo', 'type_id'],
         'plataforma' => ['Plataforma', 'plataforma', null],
@@ -39,6 +39,9 @@ final class Postagens
         if ($kind === 'plataforma') {
             return (int) Db::value('SELECT COUNT(*) FROM post_platforms WHERE option_id = ?', [$id]);
         }
+        if ($kind === 'formato') {
+            return (int) Db::value('SELECT COUNT(*) FROM post_formats WHERE option_id = ?', [$id]);
+        }
         $col = self::LISTAS[$kind][2];
         return (int) Db::value("SELECT COUNT(*) FROM posts WHERE $col = ?", [$id]);
     }
@@ -65,11 +68,15 @@ final class Postagens
     {
         $w = ['1=1'];
         $p = [];
-        foreach (['formato' => 'format_id', 'projeto' => 'project_id', 'situacao' => 'status_id', 'tipo' => 'type_id'] as $k => $col) {
+        foreach (['projeto' => 'project_id', 'situacao' => 'status_id', 'tipo' => 'type_id'] as $k => $col) {
             if (isset($f[$k])) {
                 $w[] = "p.$col = ?";
                 $p[] = $f[$k];
             }
+        }
+        if (isset($f['formato'])) {
+            $w[] = 'EXISTS (SELECT 1 FROM post_formats x WHERE x.post_id = p.id AND x.option_id = ?)';
+            $p[] = $f['formato'];
         }
         if (isset($f['plataforma'])) {
             $w[] = 'EXISTS (SELECT 1 FROM post_platforms x WHERE x.post_id = p.id AND x.option_id = ?)';
@@ -98,16 +105,15 @@ final class Postagens
     public static function consultar(array $f, string $ordem = 'data', string $dir = 'asc', int $limite = 50, int $desvio = 0, ?string $ini = null, ?string $fim = null): array
     {
         [$w, $p] = self::onde($f, $ini, $fim);
-        $cols = ['data' => 'p.post_date', 'titulo' => 'p.title', 'situacao' => 's.sort_order', 'formato' => 'fo.sort_order', 'projeto' => 'pr.sort_order'];
+        $cols = ['data' => 'p.post_date', 'titulo' => 'p.title', 'situacao' => 's.sort_order', 'projeto' => 'pr.sort_order'];
         $col = $cols[$ordem] ?? 'p.post_date';
         $dir = $dir === 'desc' ? 'DESC' : 'ASC';
         $total = (int) Db::value("SELECT COUNT(*) FROM posts p WHERE $w", $p);
         $linhas = Db::all(
-            "SELECT p.*, s.name AS situacao, s.color AS situacao_cor, fo.name AS formato, fo.color AS formato_cor,
+            "SELECT p.*, s.name AS situacao, s.color AS situacao_cor,
                     pr.name AS projeto, pr.color AS projeto_cor, ti.name AS tipo, ti.color AS tipo_cor
                FROM posts p
                LEFT JOIN post_options s ON s.id = p.status_id
-               LEFT JOIN post_options fo ON fo.id = p.format_id
                LEFT JOIN post_options pr ON pr.id = p.project_id
                LEFT JOIN post_options ti ON ti.id = p.type_id
               WHERE $w
@@ -128,6 +134,11 @@ final class Postagens
         $in = implode(',', array_fill(0, count($ids), '?'));
         $pessoas = Db::all("SELECT pp.post_id, u.id, u.name, u.photo FROM post_people pp JOIN users u ON u.id = pp.user_id WHERE pp.post_id IN ($in) ORDER BY u.name", $ids);
         $plat = Db::all("SELECT pl.post_id, o.id, o.name, o.color FROM post_platforms pl JOIN post_options o ON o.id = pl.option_id WHERE pl.post_id IN ($in) ORDER BY o.sort_order", $ids);
+        $fmt = Db::all("SELECT pf.post_id, o.id, o.name, o.color FROM post_formats pf JOIN post_options o ON o.id = pf.option_id WHERE pf.post_id IN ($in) ORDER BY o.sort_order", $ids);
+        $ff = [];
+        foreach ($fmt as $r) {
+            $ff[(int) $r['post_id']][] = $r;
+        }
         $pp = [];
         $ll = [];
         foreach ($pessoas as $r) {
@@ -139,7 +150,14 @@ final class Postagens
         foreach ($linhas as &$l) {
             $l['pessoas'] = $pp[(int) $l['id']] ?? [];
             $l['plataformas'] = $ll[(int) $l['id']] ?? [];
+            $l['formatos'] = $ff[(int) $l['id']] ?? [];
         }
+    }
+
+    /** Situação "Postado" (a última da lista de situações) conta como entregue, não como atrasada. */
+    public static function ehPostado(array $l): bool
+    {
+        return mb_strtolower((string) ($l['situacao'] ?? '')) === 'postado';
     }
 
     public static function obter(int $id): ?array
@@ -191,7 +209,6 @@ final class Postagens
             'post_date' => $data !== '' ? $data : null,
             'project_id' => $uma('project_id', 'projeto'),
             'type_id' => $uma('type_id', 'tipo'),
-            'format_id' => $uma('format_id', 'formato'),
             'status_id' => $uma('status_id', 'situacao'),
             'objective' => $obj !== '' ? $obj : null,
             'content' => trim($conteudo) !== '' ? $conteudo : null,
@@ -203,6 +220,13 @@ final class Postagens
             }
         }
         $d['_plataformas'] = array_values(array_unique($d['_plataformas']));
+        $d['_formatos'] = [];
+        foreach ((array) ($in['formatos'] ?? []) as $v) {
+            if (ctype_digit((string) $v) && Db::value("SELECT 1 FROM post_options WHERE id = ? AND kind = 'formato'", [(int) $v])) {
+                $d['_formatos'][] = (int) $v;
+            }
+        }
+        $d['_formatos'] = array_values(array_unique($d['_formatos']));
         $d['_pessoas'] = [];
         foreach ((array) ($in['pessoas'] ?? []) as $v) {
             if (ctype_digit((string) $v) && Db::value('SELECT 1 FROM users WHERE id = ?', [(int) $v])) {
@@ -219,8 +243,9 @@ final class Postagens
         $pdo = Db::pdo();
         $pdo->beginTransaction();
         try {
-            $campos = ['title', 'post_date', 'project_id', 'type_id', 'format_id', 'status_id', 'objective', 'content'];
+            $campos = ['title', 'post_date', 'project_id', 'type_id', 'status_id', 'objective', 'content'];
             $antes = $id ? Db::one('SELECT * FROM posts WHERE id = ?', [$id]) : null;
+            $antesFormatos = $id ? array_map('intval', array_column(Db::all('SELECT option_id FROM post_formats WHERE post_id = ?', [$id]), 'option_id')) : [];
             $antesPessoas = $id ? Db::all('SELECT user_id FROM post_people WHERE post_id = ?', [$id]) : [];
             if ($id) {
                 $set = implode(',', array_map(fn($c) => "$c = ?", $campos));
@@ -234,6 +259,10 @@ final class Postagens
             Db::run('DELETE FROM post_people WHERE post_id = ?', [$id]);
             foreach ($d['_pessoas'] as $uid) {
                 Db::run('INSERT INTO post_people (post_id, user_id) VALUES (?,?)', [$id, $uid]);
+            }
+            Db::run('DELETE FROM post_formats WHERE post_id = ?', [$id]);
+            foreach ($d['_formatos'] as $oid) {
+                Db::run('INSERT INTO post_formats (post_id, option_id) VALUES (?,?)', [$id, $oid]);
             }
             Db::run('DELETE FROM post_platforms WHERE post_id = ?', [$id]);
             foreach ($d['_plataformas'] as $oid) {
@@ -259,7 +288,15 @@ final class Postagens
                     $det[$nome] = [mb_substr((string) $antes[$c], 0, 80), mb_substr((string) $d[$c], 0, 80)];
                 }
             }
-            foreach (['project_id' => 'Projeto', 'type_id' => 'Tipo', 'format_id' => 'Formato', 'status_id' => 'Situação'] as $c => $nome) {
+            $nomesFmt = fn(array $ids) => implode(', ', array_map(fn($i) => (string) Db::value('SELECT name FROM post_options WHERE id = ?', [$i]), $ids));
+            $a = $antesFormatos;
+            $b = $d['_formatos'];
+            sort($a);
+            sort($b);
+            if ($a !== $b) {
+                $det['Formato'] = [$nomesFmt($a), $nomesFmt($b)];
+            }
+            foreach (['project_id' => 'Projeto', 'type_id' => 'Tipo', 'status_id' => 'Situação'] as $c => $nome) {
                 if ((int) $antes[$c] !== (int) $d[$c]) {
                     $det[$nome] = [(string) Db::value('SELECT name FROM post_options WHERE id = ?', [(int) $antes[$c]]), (string) Db::value('SELECT name FROM post_options WHERE id = ?', [(int) $d[$c]])];
                 }

@@ -12,7 +12,7 @@ $pess = function (string $campo) use ($pessoas, $val): string {
 ?>
 <div class="cabeca-pagina"><a class="voltar" href="/blog">← Voltar ao Blog</a></div>
 <?php foreach ($erros as $er): ?><div class="aviso erro" role="alert"><?= e($er) ?></div><?php endforeach; ?>
-<div class="aviso-segunda">PUBLICAÇÃO TODA SEGUNDA! Só preencher a “Data de Publicação”!</div>
+<?php $lugar = 'pauta'; include __DIR__ . '/_aviso.php'; ?>
 <?php if ($val('publish_date') && data_valida((string) $val('publish_date')) && !Blog::ehSegunda((string) $val('publish_date'))): ?>
   <div class="aviso">Atenção: a data de publicação escolhida não é uma segunda-feira.</div>
 <?php endif; ?>

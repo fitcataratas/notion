@@ -59,7 +59,11 @@ $total = array_sum($contagem);
         <?php foreach ($abertas as $t): ?>
           <li>
             <a href="/tarefas/<?= (int) $t['id'] ?>?<?= e(http_build_query(['volta' => $volta])) ?>"><?= e($t['title']) ?></a>
-            <span class="meta"><?= chip_status($t['status']) ?><?= chip_prioridade($t['priority']) ?>
+            <span class="meta">
+              <form method="post" action="/tarefas/<?= (int) $t['id'] ?>/status" data-auto class="em-linha">
+                <?= Csrf::campo() ?><input type="hidden" name="volta" value="<?= e($volta) ?>">
+                <select name="status" class="sel-chip st-<?= e(slug($t['status'])) ?>" aria-label="Status de <?= e($t['title']) ?>"><?php foreach (Config::STATUS as $stt): ?><option<?= $stt === $t['status'] ? ' selected' : '' ?>><?= e($stt) ?></option><?php endforeach; ?></select>
+              </form><?= chip_prioridade($t['priority']) ?>
               <?php if ($t['start_date']): ?><span class="data<?= tarefa_atrasada($t, $hoje) ? ' alerta' : '' ?>"><?= e(data_tarefa($t)) ?></span><?php endif; ?>
               <?= avatares($t['responsaveis']) ?></span>
           </li>

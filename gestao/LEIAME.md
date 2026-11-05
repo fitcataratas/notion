@@ -1,8 +1,35 @@
-# Gestão De Angeli — Etapas 1 a 5 (versão 1.7)
+# Gestão De Angeli — Etapas 1 a 5 (versão 1.9)
 
 Sistema próprio para substituir o Notion: login por e-mail e senha, Central de Tarefas
 (quadro, tabela, calendário e "Minhas tarefas"), setores, projetos e histórico de alterações.
 As 88 tarefas do Notion já vêm prontas para importar.
+
+**Novidades da versão 1.9:**
+- **Avisos e textos editáveis em qualquer página** (Início, Minhas tarefas, Central de Tarefas, Solicitações, Cronograma,
+  Ideias, Post - Blog, Reuniões, Quem faz o quê, Missão, Projetos e cada Setor). Quem é administrador vê em cada página
+  o botão "+ Adicionar aviso ou texto". Dá para escolher o texto (com links), a cor, se é faixa colorida ou texto simples,
+  e se fica no topo ou no fim da página. Para mudar ou apagar, é só usar "✎ Editar" no próprio aviso. Pode ter vários por página.
+- A atualização cria a tabela nova sozinha (não precisa rodar comando). Esta versão já inclui tudo da 1.8.2.
+
+**Novidades da versão 1.8.2:**
+- O **aviso vermelho do Post - Blog** ("Publicação toda segunda…") agora pode ser editado pelo administrador:
+  em Administração → Página inicial e textos (ou pelo link "Editar aviso" que aparece no próprio aviso).
+  Deixando em branco, o aviso some.
+
+**Novidades da versão 1.8.1:**
+- No Cronograma de Postagens, o **Dashboard semanal** agora é a 1ª aba e a tela que abre ao entrar
+  (depois vêm Tabela e Calendário de Postagens).
+- Conferido: qualquer pessoa com papel **Equipe** muda o status de qualquer tarefa (Quadro, Tabela, Setor e tela da tarefa).
+
+**Novidades da versão 1.8:**
+- O **Dashboard semanal** agora fica dentro do **Cronograma de Postagens**, como a 3ª forma de ver
+  (Tabela, Calendário de Postagens e Dashboard semanal). Usa os mesmos dados e os mesmos nomes
+  do cronograma (Projeto, Plataforma, Situação, Profissional). Dá para arrastar uma postagem de um dia para outro.
+- O item "Dashboard Editorial" saiu do menu. As postagens que estavam nele foram copiadas
+  automaticamente para o Cronograma (a atualização faz isso sozinha, não precisa rodar comando).
+- No formulário de **Nova postagem**, o **Formato** agora aceita mais de uma opção.
+- Projeto **FITGEEK** adicionado (Cronograma e projetos das tarefas).
+- Na **Tabela** de tarefas e na página de cada **Setor**, o status pode ser trocado direto na linha.
 
 **Novidades da versão 1.7:**
 - **Dashboard Editorial** (menu Marketing): quadro de produção de conteúdo, separado do Cronograma de Postagens.

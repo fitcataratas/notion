@@ -10,16 +10,40 @@ function dados_postagem(): array
 }
 
 Router::add('GET', '/postagens', function (array $p, array $u) {
-    $visao = ($_GET['view'] ?? '') === 'calendario' ? 'calendario' : 'tabela';
+    $visao = in_array($_GET['view'] ?? '', ['tabela', 'calendario', 'semana'], true) ? $_GET['view'] : 'semana';
     $f = Postagens::filtros($_GET);
     $dados = dados_postagem() + ['f' => $f, 'visao' => $visao, 'titulo' => 'Cronograma de Postagens'];
     if ($visao === 'tabela') {
-        $ordem = array_key_exists($_GET['ordem'] ?? '', ['data' => 1, 'titulo' => 1, 'situacao' => 1, 'formato' => 1, 'projeto' => 1]) ? $_GET['ordem'] : 'data';
+        $ordem = array_key_exists($_GET['ordem'] ?? '', ['data' => 1, 'titulo' => 1, 'situacao' => 1, 'projeto' => 1]) ? $_GET['ordem'] : 'data';
         $dir = ($_GET['dir'] ?? 'asc') === 'desc' ? 'desc' : 'asc';
         $porPagina = 50;
         $pag = max(1, (int) ($_GET['pag'] ?? 1));
         $r = Postagens::consultar($f, $ordem, $dir, $porPagina, ($pag - 1) * $porPagina);
         $dados += ['linhas' => $r['linhas'], 'total' => $r['total'], 'ordem' => $ordem, 'dir' => $dir, 'pag' => $pag, 'paginas' => max(1, (int) ceil($r['total'] / $porPagina))];
+    } elseif ($visao === 'semana') {
+        $hoje = date('Y-m-d');
+        $ref = data_valida($_GET['semana'] ?? '') ? new DateTimeImmutable($_GET['semana']) : new DateTimeImmutable($hoje);
+        $seg = $ref->modify('-' . ((int) $ref->format('N') - 1) . ' days');
+        $dias = [];
+        for ($i = 0; $i < 7; $i++) {
+            $dias[] = $seg->modify("+$i days");
+        }
+        $r = Postagens::consultar(array_diff_key($f, ['sem_data' => 1]), 'data', 'asc', 1500, 0, $dias[0]->format('Y-m-d'), $dias[6]->format('Y-m-d'));
+        // Os contadores do topo seguem os filtros, menos o de situação (assim cada número continua clicável).
+        $todas = Postagens::consultar(array_diff_key($f, ['sem_data' => 1, 'situacao' => 1]), 'data', 'asc', 5000)['linhas'];
+        $cont = [];
+        $atras = 0;
+        foreach ($todas as $l) {
+            $cont[(int) $l['status_id']] = ($cont[(int) $l['status_id']] ?? 0) + 1;
+            if ($l['post_date'] && $l['post_date'] < $hoje && !Postagens::ehPostado($l)) {
+                $atras++;
+            }
+        }
+        $dados += [
+            'dias' => $dias, 'seg' => $seg, 'semana_linhas' => $r['linhas'], 'ant' => $seg->modify('-7 days')->format('Y-m-d'), 'prox' => $seg->modify('+7 days')->format('Y-m-d'),
+            'agrupar' => ($_GET['agrupar'] ?? '') === 'plataforma' ? 'plataforma' : 'projeto', 'contagem' => $cont, 'atrasados' => $atras,
+            'sem_data_total' => Postagens::consultar(array_merge($f, ['sem_data' => 1]), 'data', 'asc', 1)['total'],
+        ];
     } else {
         $mes = mes_valido($_GET['mes'] ?? null);
         $primeiro = new DateTimeImmutable("$mes-01");
@@ -43,9 +67,17 @@ Router::add('GET', '/postagens', function (array $p, array $u) {
 
 // ------------------------------------------------------------- nova / editar
 Router::add('GET', '/postagens/nova', function (array $p, array $u) {
-    $v = ['_pessoas' => [], '_plataformas' => []];
+    $v = ['_pessoas' => [], '_plataformas' => [], '_formatos' => []];
     if (!empty($_GET['data']) && data_valida($_GET['data'])) {
         $v['post_date'] = $_GET['data'];
+    }
+    foreach (['projeto' => 'project_id'] as $q => $col) {
+        if (!empty($_GET[$q]) && ctype_digit((string) $_GET[$q]) && Db::value("SELECT 1 FROM post_options WHERE id = ? AND kind = 'projeto'", [(int) $_GET[$q]])) {
+            $v[$col] = (int) $_GET[$q];
+        }
+    }
+    if (!empty($_GET['plataforma']) && ctype_digit((string) $_GET['plataforma']) && Db::value("SELECT 1 FROM post_options WHERE id = ? AND kind = 'plataforma'", [(int) $_GET['plataforma']])) {
+        $v['_plataformas'] = [(int) $_GET['plataforma']];
     }
     $ideia = null;
     if (!empty($_GET['ideia']) && ctype_digit((string) $_GET['ideia'])) {
@@ -82,6 +114,7 @@ Router::add('GET', '/postagens/(?P<id>\d+)', function (array $p, array $u) {
     }
     $x['_pessoas'] = array_map(fn($r) => (int) $r['id'], $x['pessoas']);
     $x['_plataformas'] = array_map(fn($r) => (int) $r['id'], $x['plataformas']);
+    $x['_formatos'] = array_map(fn($r) => (int) $r['id'], $x['formatos']);
     View::render('postagens/form', dados_postagem() + ['titulo' => $x['title'], 'v' => $x, 'id' => (int) $x['id'], 'erros' => [], 'ideia' => null, 'volta' => volta_segura($_GET['volta'] ?? '/postagens')]);
 }, ['papel' => 'equipe']);
 
