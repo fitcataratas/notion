@@ -1,5 +1,5 @@
 <?php
-/** @var array $colunas @var string $q @var bool $pode_avaliar @var array $pautas @var array $f */
+/** @var array $colunas @var string $q @var bool $pode_avaliar @var array $pautas @var array $f @var array $resp */
 $volta = $_SERVER['REQUEST_URI'] ?? '/blog';
 $totalIdeias = array_sum(array_map('count', $colunas));
 ?>
@@ -22,7 +22,7 @@ $totalIdeias = array_sum(array_map('count', $colunas));
     </form>
   </details>
 </div>
-<p class="suave"><?= $pode_avaliar ? 'Mova a ideia de coluna para avaliar: ao ir para Aprovado a pauta nasce sozinha; Cancelado e Publicado atualizam a pauta.' : 'Qualquer pessoa da equipe cadastra ideias. Quem avalia é a Coordenação.' ?> (<?= (int) $totalIdeias ?> ideias)</p>
+<p class="suave"><?= $pode_avaliar ? 'Arraste a ideia de coluna (ou use “Mover para…”): ao ir para Aprovado a pauta nasce sozinha; Cancelado e Publicado atualizam a pauta.' : '' ?> (<?= (int) $totalIdeias ?> ideias)</p>
 
 <?php $lugar = 'ideias'; include __DIR__ . '/_aviso.php'; ?>
 <div class="quadro-pedidos quadro-blog" data-mover-campo="avaliacao">
@@ -33,6 +33,7 @@ $totalIdeias = array_sum(array_map('count', $colunas));
       <?php foreach ($itens as $i): ?>
         <article<?= $pode_avaliar ? ' draggable="true" data-acao="/blog/ideias/' . (int) $i['id'] . '/avaliacao"' : '' ?> class="cartao-tarefa">
           <a class="cartao-titulo" href="/blog/ideias/<?= (int) $i['id'] ?>"><?= e($i['title']) ?></a>
+          <?php if (!empty($resp[(int) $i['id']]) || $i['image_code']): ?><p class="suave linha-ideia"><?= !empty($resp[(int) $i['id']]) ? avatares($resp[(int) $i['id']], 4) : '' ?><?= $i['image_code'] ? ' <span title="Tem imagem">🖼</span>' : '' ?></p><?php endif; ?>
           <?php if ($i['pauta_id']): ?><p class="suave"><a href="/blog/pautas/<?= (int) $i['pauta_id'] ?>">Pauta: <?= e($i['pauta_status']) ?></a></p><?php endif; ?>
           <?php if ($pode_avaliar): ?>
             <form method="post" action="/blog/ideias/<?= (int) $i['id'] ?>/avaliacao" data-auto>

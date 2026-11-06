@@ -17,8 +17,14 @@ final class Blog
     public const DIAS_PESQUISA = 5;   // pesquisa = publicação − 5 dias
     public const DIAS_TEXTO = 3;      // texto = publicação − 3 dias
 
-    /** Quem avalia as ideias: administradores e responsáveis do setor Coordenação. */
+    /** Mover ideias entre as colunas: qualquer pessoa da equipe (e administradores). */
     public static function podeAvaliar(array $u): bool
+    {
+        return Perm::equipe($u);
+    }
+
+    /** Apagar ideia: só administradores e responsáveis do setor Coordenação. */
+    public static function podeApagar(array $u): bool
     {
         if (Perm::admin($u)) {
             return true;
@@ -54,19 +60,33 @@ final class Blog
             $p[] = '%' . str_replace(['%', '_'], ['\\%', '\\_'], $q) . '%';
         }
         return Db::all(
-            "SELECT i.id, i.title, i.evaluation, i.created_at, pa.id AS pauta_id, pa.status AS pauta_status
+            "SELECT i.id, i.title, i.evaluation, i.created_at, i.image_code, pa.id AS pauta_id, pa.status AS pauta_status
                FROM blog_ideas i LEFT JOIN blog_pautas pa ON pa.idea_id = i.id $w ORDER BY i.created_at DESC, i.id DESC",
             $p
         );
     }
 
+    /** Responsáveis de todas as ideias: [id da ideia => [pessoas]]. */
+    public static function responsaveisPorIdeia(): array
+    {
+        $m = [];
+        foreach (Db::all('SELECT bp.idea_id, u.id, u.name, u.photo FROM blog_idea_people bp JOIN users u ON u.id = bp.user_id ORDER BY u.name') as $r) {
+            $m[(int) $r['idea_id']][] = $r;
+        }
+        return $m;
+    }
+
     public static function ideia(int $id): ?array
     {
-        return Db::one(
+        $i = Db::one(
             'SELECT i.*, u.name AS autor, pa.id AS pauta_id, pa.status AS pauta_status
                FROM blog_ideas i LEFT JOIN users u ON u.id = i.created_by LEFT JOIN blog_pautas pa ON pa.idea_id = i.id WHERE i.id = ?',
             [$id]
         );
+        if ($i) {
+            $i['_resp'] = array_map('intval', array_column(Db::all('SELECT user_id FROM blog_idea_people WHERE idea_id = ?', [$id]), 'user_id'));
+        }
+        return $i;
     }
 
     public static function criarIdeia(string $titulo, ?string $notas, array $u): int|string
@@ -89,7 +109,11 @@ final class Blog
         return (bool) Db::value('SELECT 1 FROM blog_ideas WHERE title = ? AND id <> ?', [$titulo, (int) $exceto]);
     }
 
-    public static function salvarIdeia(int $id, string $titulo, ?string $notas, array $u): ?string
+    /**
+     * Salva título, texto, responsáveis e imagem da ideia. Devolve a mensagem de erro, ou null se deu certo.
+     * @param int[] $responsaveis ids marcados
+     */
+    public static function salvarIdeia(int $id, string $titulo, ?string $notas, array $responsaveis, ?array $imagem, bool $removerImagem, array $u): ?string
     {
         $titulo = trim($titulo);
         if ($titulo === '' || mb_strlen($titulo) > 255) {
@@ -101,8 +125,49 @@ final class Blog
         if (self::tituloExiste($titulo, $id)) {
             return 'Já existe outra ideia com esse título.';
         }
+        $atual = Db::one('SELECT image_code, image_ext FROM blog_ideas WHERE id = ?', [$id]);
+        $temArquivo = $imagem && ($imagem['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE;
+        $img = null;
+        if ($temArquivo) {
+            $img = Imagem::processar($imagem, 'artigo');
+            if (!$img['ok']) {
+                return $img['erro'] ?? 'Não consegui receber a imagem.';
+            }
+        }
+        $ids = array_values(array_unique(array_filter(array_map('intval', $responsaveis))));
+        if ($ids) {
+            $marcas = implode(',', array_fill(0, count($ids), '?'));
+            $ids = array_map('intval', array_column(Db::all("SELECT id FROM users WHERE active = 1 AND role <> 'externo' AND id IN ($marcas)", $ids), 'id'));
+        }
+        $antes = array_map('intval', array_column(Db::all('SELECT user_id FROM blog_idea_people WHERE idea_id = ?', [$id]), 'user_id'));
+
         Db::run('UPDATE blog_ideas SET title = ?, notes = ? WHERE id = ?', [$titulo, $notas !== null && trim($notas) !== '' ? $notas : null, $id]);
-        Audit::registrar('editar', 'blog', $id, 'Editou a ideia de blog ' . $titulo, null, $u);
+        Db::run('DELETE FROM blog_idea_people WHERE idea_id = ?', [$id]);
+        foreach ($ids as $uid) {
+            Db::run('INSERT INTO blog_idea_people (idea_id, user_id) VALUES (?, ?)', [$id, $uid]);
+        }
+        foreach (array_diff($ids, $antes) as $uid) {
+            Notificacoes::avisar($uid, 'blog', ($u['name'] ?? 'Alguém') . ' colocou você como responsável pela ideia de blog “' . $titulo . '”', '/blog/ideias/' . $id, $u);
+        }
+        $mudou = [];
+        if (array_diff($ids, $antes) || array_diff($antes, $ids)) {
+            $nomes = fn(array $l) => $l ? implode(', ', array_column(Db::all('SELECT name FROM users WHERE id IN (' . implode(',', array_map('intval', $l)) . ') ORDER BY name'), 'name')) : '—';
+            $mudou['Responsáveis'] = [$nomes($antes), $nomes($ids)];
+        }
+        if ($img && $img['ok']) {
+            $cod = Imagem::guardar('blog', $img['bin'], $img['ext']);
+            $nome = mb_substr(preg_replace('/[^\p{L}\p{N}._ -]+/u', '', pathinfo((string) $imagem['name'], PATHINFO_FILENAME)) ?: 'imagem', 0, 100);
+            Db::run('UPDATE blog_ideas SET image_code = ?, image_ext = ?, image_name = ? WHERE id = ?', [$cod, $img['ext'], $nome . '.' . $img['ext'], $id]);
+            if ($atual && $atual['image_code']) {
+                Imagem::apagar('blog', $atual['image_code'], (string) $atual['image_ext']);
+            }
+            $mudou['Imagem'] = [$atual && $atual['image_code'] ? 'trocada' : '—', 'enviada'];
+        } elseif ($removerImagem && $atual && $atual['image_code']) {
+            Imagem::apagar('blog', $atual['image_code'], (string) $atual['image_ext']);
+            Db::run('UPDATE blog_ideas SET image_code = NULL, image_ext = NULL, image_name = NULL WHERE id = ?', [$id]);
+            $mudou['Imagem'] = ['enviada', 'removida'];
+        }
+        Audit::registrar('editar', 'blog', $id, 'Editou a ideia de blog ' . $titulo, $mudou ?: null, $u);
         return null;
     }
 
@@ -168,7 +233,11 @@ final class Blog
         if (Db::value('SELECT 1 FROM blog_pautas WHERE idea_id = ?', [$id])) {
             return 'Essa ideia já gerou uma pauta e não pode ser apagada. Mova para “Cancelado”.';
         }
+        $im = Db::one('SELECT image_code, image_ext FROM blog_ideas WHERE id = ?', [$id]);
         Db::run('DELETE FROM blog_ideas WHERE id = ?', [$id]);
+        if ($im && $im['image_code']) {
+            Imagem::apagar('blog', $im['image_code'], (string) $im['image_ext']);
+        }
         Audit::registrar('excluir', 'blog', $id, 'Apagou a ideia de blog ' . $i['title'], null, $u);
         return null;
     }

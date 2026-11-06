@@ -404,3 +404,6 @@ label.inline{display:flex;gap:.5rem;align-items:center}
 .texto-pagina>p{margin:0;flex:1 1 20rem}
 .aviso-novo{margin:0 0 14px}
 .aviso-novo>summary{color:var(--suave)}
+
+.previa-imagem{display:block;max-width:100%;max-height:260px;border-radius:var(--raio);border:1px solid var(--borda);margin:.3rem 0}
+.linha-ideia{display:flex;align-items:center;gap:6px;margin:.2rem 0}

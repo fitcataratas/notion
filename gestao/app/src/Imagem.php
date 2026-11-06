@@ -12,8 +12,9 @@ final class Imagem
     private const MAX_LADO = 6000;   // evita imagens gigantes que estourariam a memória
 
     /**
-     * @return array{ok:bool, erro?:string, bin?:string}
-     * @param string $modo 'foto' (quadrada, JPEG) ou 'logo' (mantém proporção e transparência, PNG)
+     * @return array{ok:bool, erro?:string, bin?:string, ext?:string}
+     * @param string $modo 'foto' (quadrada, JPEG), 'logo' (mantém proporção e transparência, PNG)
+     *                     ou 'artigo' (imagem do blog: mantém proporção, até 2400 px, JPG ou PNG, até 8 MB)
      */
     public static function processar(?array $arq, string $modo): array
     {
@@ -27,8 +28,9 @@ final class Imagem
         if (!extension_loaded('gd')) {
             return ['ok' => false, 'erro' => 'O servidor não tem suporte a imagens ativado.'];
         }
-        if ($arq['size'] > self::MAX_BYTES) {
-            return ['ok' => false, 'erro' => 'A imagem é grande demais (máximo 5 MB).'];
+        $max = $modo === 'artigo' ? 8 * 1024 * 1024 : self::MAX_BYTES;
+        if ($arq['size'] > $max) {
+            return ['ok' => false, 'erro' => 'A imagem é grande demais (máximo ' . ($max >> 20) . ' MB).'];
         }
         $info = @getimagesize($arq['tmp_name']);
         if (!$info || !in_array($info[2], [IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_WEBP], true)) {
@@ -64,6 +66,24 @@ final class Imagem
             imagecopyresampled($dest, $orig, 0, 0, intdiv($w - $lado, 2), intdiv($h - $lado, 2), 320, 320, $lado, $lado);
             ob_start();
             imagejpeg($dest, null, 86);
+        } elseif ($modo === 'artigo') {
+            $esc = min(1, 2400 / max($w, $h));
+            $nw = max(1, (int) round($w * $esc));
+            $nh = max(1, (int) round($h * $esc));
+            $dest = imagecreatetruecolor($nw, $nh);
+            $png = $info[2] !== IMAGETYPE_JPEG;
+            if ($png) {
+                imagealphablending($dest, false);
+                imagesavealpha($dest, true);
+                imagefill($dest, 0, 0, imagecolorallocatealpha($dest, 0, 0, 0, 127));
+            } else {
+                imagefill($dest, 0, 0, imagecolorallocate($dest, 255, 255, 255));
+            }
+            imagecopyresampled($dest, $orig, 0, 0, 0, 0, $nw, $nh, $w, $h);
+            ob_start();
+            $png ? imagepng($dest, null, 6) : imagejpeg($dest, null, 90);
+            $bin = (string) ob_get_clean();
+            return $bin !== '' ? ['ok' => true, 'bin' => $bin, 'ext' => $png ? 'png' : 'jpg'] : ['ok' => false, 'erro' => 'Falha ao preparar a imagem.'];
         } else {
             $esc = min(1, 640 / $w, 160 / $h);
             $nw = max(1, (int) round($w * $esc));

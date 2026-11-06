@@ -1,8 +1,17 @@
-# Gestão De Angeli — Etapas 1 a 5 (versão 1.9)
+# Gestão De Angeli — Etapas 1 a 5 (versão 1.10)
 
 Sistema próprio para substituir o Notion: login por e-mail e senha, Central de Tarefas
 (quadro, tabela, calendário e "Minhas tarefas"), setores, projetos e histórico de alterações.
 As 88 tarefas do Notion já vêm prontas para importar.
+
+**Novidades da versão 1.10:**
+- **Post - Blog:** agora **qualquer pessoa da equipe** move as ideias entre as colunas (arrastando ou pelo "Mover para…"),
+  por exemplo de "Em revisão" para "Aprovado". Só administradores e responsáveis da Coordenação continuam podendo **apagar** uma ideia.
+- Dentro da ideia dá para **marcar responsáveis** (como numa tarefa). Eles recebem um aviso no sininho e aparecem no cartão da ideia.
+- Dentro da ideia há um espaço para **subir a imagem do artigo** (JPG, PNG ou WEBP, até 8 MB). O sistema reduz para no máximo 2400 px,
+  mostra a prévia, e há botão "Baixar imagem". Só a equipe vê a imagem. Dá para trocar ou remover.
+- A atualização cria sozinha as tabelas novas (não precisa rodar comando). A pasta `storage` passa a ter também a subpasta `blog`
+  (inclua no backup, junto com `fotos`).
 
 **Novidades da versão 1.9:**
 - **Avisos e textos editáveis em qualquer página** (Início, Minhas tarefas, Central de Tarefas, Solicitações, Cronograma,
