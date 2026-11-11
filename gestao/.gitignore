@@ -1,4 +1,1 @@
 .env
-storage/*
-!storage/.gitkeep
-backups/
