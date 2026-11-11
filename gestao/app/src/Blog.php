@@ -98,7 +98,11 @@ final class Blog
         if (self::tituloExiste($titulo, null)) {
             return 'Já existe uma ideia com esse título no Banco de Ideias.';
         }
-        Db::run('INSERT INTO blog_ideas (title, notes, created_by) VALUES (?,?,?)', [$titulo, $notas !== null && trim($notas) !== '' ? $notas : null, (int) $u['id']]);
+        $notas = RichText::limpar($notas);
+        if (mb_strlen((string) $notas) > 200000) {
+            return 'O texto está grande demais.';
+        }
+        Db::run('INSERT INTO blog_ideas (title, notes, notes_rich, created_by) VALUES (?,?,1,?)', [$titulo, $notas, (int) $u['id']]);
         $id = Db::insertId();
         Audit::registrar('criar', 'blog', $id, 'Nova ideia de blog: ' . $titulo, null, $u);
         return $id;
@@ -119,6 +123,7 @@ final class Blog
         if ($titulo === '' || mb_strlen($titulo) > 255) {
             return 'Escreva o título da ideia (até 255 letras).';
         }
+        $notas = RichText::limpar($notas);
         if (mb_strlen((string) $notas) > 200000) {
             return 'O texto está grande demais.';
         }
@@ -141,7 +146,7 @@ final class Blog
         }
         $antes = array_map('intval', array_column(Db::all('SELECT user_id FROM blog_idea_people WHERE idea_id = ?', [$id]), 'user_id'));
 
-        Db::run('UPDATE blog_ideas SET title = ?, notes = ? WHERE id = ?', [$titulo, $notas !== null && trim($notas) !== '' ? $notas : null, $id]);
+        Db::run('UPDATE blog_ideas SET title = ?, notes = ?, notes_rich = 1 WHERE id = ?', [$titulo, $notas, $id]);
         Db::run('DELETE FROM blog_idea_people WHERE idea_id = ?', [$id]);
         foreach ($ids as $uid) {
             Db::run('INSERT INTO blog_idea_people (idea_id, user_id) VALUES (?, ?)', [$id, $uid]);

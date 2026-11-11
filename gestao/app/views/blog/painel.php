@@ -17,7 +17,8 @@ $totalIdeias = array_sum(array_map('count', $colunas));
     <form method="post" action="/blog/ideias" class="formulario cartao">
       <?= Csrf::campo() ?>
       <label>Ideia <input type="text" name="title" required maxlength="255" placeholder="Qual o tema do artigo?"></label>
-      <label>Detalhes <small>(opcional)</small><textarea name="notes" rows="3" maxlength="200000"></textarea></label>
+      <div class="campo-rico"><span class="rotulo" id="rot-nova">Detalhes <small>(opcional)</small></span>
+        <textarea name="notes" rows="4" maxlength="400000" data-rico data-rico-baixo aria-labelledby="rot-nova"></textarea></div>
       <div class="acoes"><button class="btn primario" type="submit">Cadastrar em “Sem Avaliação”</button></div>
     </form>
   </details>

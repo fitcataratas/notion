@@ -407,3 +407,21 @@ label.inline{display:flex;gap:.5rem;align-items:center}
 
 .previa-imagem{display:block;max-width:100%;max-height:260px;border-radius:var(--raio);border:1px solid var(--borda);margin:.3rem 0}
 .linha-ideia{display:flex;align-items:center;gap:6px;margin:.2rem 0}
+
+/* Editor de texto formatado */
+.campo-rico{display:block;margin:0 0 14px}
+.campo-rico>.rotulo{display:block;font-weight:600;margin:0 0 6px}
+.rico{border:1px solid var(--borda);border-radius:var(--raio);background:var(--superficie);overflow:hidden}
+.rico:focus-within{border-color:var(--marca);box-shadow:0 0 0 3px color-mix(in srgb,var(--marca) 22%,transparent)}
+.rico-barra{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:6px;border-bottom:1px solid var(--borda);background:color-mix(in srgb,var(--borda) 28%,var(--superficie))}
+.rico-bt{font:inherit;font-size:.85rem;padding:4px 9px;border:1px solid var(--borda);border-radius:6px;background:var(--superficie);color:var(--texto);cursor:pointer}
+.rico-bt:hover{border-color:var(--marca)}
+.rico-sep{width:1px;height:20px;background:var(--borda);margin:0 4px}
+.rico-area{min-height:18rem;max-height:70vh;overflow:auto;padding:12px 14px;outline:none;line-height:1.6}
+.rico-area.baixo{min-height:7rem}
+.texto-rico h2{font-size:1.3rem;margin:1em 0 .4em}
+.texto-rico h3{font-size:1.1rem;margin:1em 0 .4em}
+.texto-rico p{margin:0 0 .8em}
+.texto-rico ul,.texto-rico ol{margin:0 0 .8em;padding-left:1.6em}
+.texto-rico blockquote{margin:0 0 .8em;padding:.2em 1em;border-left:4px solid var(--borda);color:var(--suave)}
+.texto-rico a{text-decoration:underline}

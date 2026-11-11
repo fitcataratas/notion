@@ -24,7 +24,8 @@
     <input type="file" name="imagem" accept="image/jpeg,image/png,image/webp" aria-label="Escolher imagem">
     <small>JPG, PNG ou WEBP, até 8 MB. <?= !empty($i['image_code']) ? 'Escolher outra troca a atual. ' : '' ?>Para colocar PDF ou planilha, use o link do Drive no texto.</small>
   </fieldset>
-  <label>Texto e detalhes <textarea name="notes" rows="16" maxlength="200000"><?= e($i['notes'] ?? '') ?></textarea></label>
+  <div class="campo-rico"><span class="rotulo" id="rot-notas">Texto e detalhes</span>
+    <textarea name="notes" rows="16" maxlength="400000" data-rico aria-labelledby="rot-notas"><?= e(RichText::paraEditor($i['notes'] ?? '', !empty($i['notes_rich']))) ?></textarea></div>
   <div class="acoes"><button class="btn primario" type="submit">Salvar</button> <a class="btn texto" href="/blog">Cancelar</a></div>
 </form>
 

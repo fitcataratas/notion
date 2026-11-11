@@ -261,3 +261,102 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(falha);
   });
 })();
+
+// Editor de texto formatado (campos <textarea data-rico>). Sem JavaScript, o campo continua sendo texto simples.
+(function () {
+  var areas = document.querySelectorAll('textarea[data-rico]');
+  if (!areas.length || !document.execCommand) { return; }
+
+  var BOTOES = [
+    ['bold', 'N', 'Negrito', null, 'b'], ['italic', 'I', 'Itálico', null, 'i'], ['underline', 'S', 'Sublinhado', null, 'u'],
+    '|', ['formatBlock', 'Título', 'Título', '<h2>'], ['formatBlock', 'Subtítulo', 'Subtítulo', '<h3>'], ['formatBlock', 'Texto', 'Parágrafo normal', '<p>'],
+    '|', ['insertUnorderedList', '• Lista', 'Lista com marcadores'], ['insertOrderedList', '1. Lista', 'Lista numerada'], ['formatBlock', '❝ Citação', 'Citação', '<blockquote>'],
+    '|', ['link', 'Link', 'Inserir link'], ['unlink', 'Tirar link', 'Remover link'], ['removeFormat', 'Limpar', 'Limpar formatação']
+  ];
+  var TROCA = { b: 'strong', strong: 'strong', i: 'em', em: 'em', u: 'u', s: 's', strike: 's', del: 's', h1: 'h2', h2: 'h2', h3: 'h3', h4: 'h3', h5: 'h3', h6: 'h3', p: 'p', div: 'p', ul: 'ul', ol: 'ol', li: 'li', blockquote: 'blockquote' };
+  var DESCARTA = { script: 1, style: 1, iframe: 1, object: 1, embed: 1, template: 1, svg: 1, math: 1, noscript: 1, head: 1, title: 1, meta: 1, link: 1 };
+
+  function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+  // Limpa o que foi colado (Word, Google Docs, sites): fica só a formatação básica.
+  function limpa(no) {
+    if (no.nodeType === 3) { return esc(no.nodeValue || ''); }
+    if (no.nodeType !== 1) { return ''; }
+    var t = no.tagName.toLowerCase();
+    if (DESCARTA[t]) { return ''; }
+    var d = ''; for (var c = no.firstChild; c; c = c.nextSibling) { d += limpa(c); }
+    var st = no.getAttribute('style') || '';
+    if (t === 'br') { return '<br>'; }
+    if (t === 'a') {
+      var h = (no.getAttribute('href') || '').trim();
+      return /^(https?:\/\/|mailto:)/i.test(h) ? '<a href="' + esc(h) + '">' + d + '</a>' : d;
+    }
+    if (TROCA[t]) {
+      if (TROCA[t] === 'strong' && /font-weight\s*:\s*(normal|400)/i.test(st)) { return d; }
+      return '<' + TROCA[t] + '>' + d + '</' + TROCA[t] + '>';
+    }
+    if (t === 'span') {
+      if (/font-weight\s*:\s*(bold|[6-9]00)/i.test(st)) { d = '<strong>' + d + '</strong>'; }
+      if (/font-style\s*:\s*italic/i.test(st)) { d = '<em>' + d + '</em>'; }
+      if (/text-decoration[^;]*underline/i.test(st)) { d = '<u>' + d + '</u>'; }
+    }
+    return d;
+  }
+
+  areas.forEach(function (ta) {
+    var caixa = document.createElement('div'); caixa.className = 'rico';
+    var barra = document.createElement('div'); barra.className = 'rico-barra'; barra.setAttribute('role', 'toolbar'); barra.setAttribute('aria-label', 'Formatação do texto');
+    var ed = document.createElement('div'); ed.className = 'rico-area texto-rico'; ed.contentEditable = 'true'; ed.setAttribute('role', 'textbox'); ed.setAttribute('aria-multiline', 'true');
+    if (ta.getAttribute('aria-labelledby')) { ed.setAttribute('aria-labelledby', ta.getAttribute('aria-labelledby')); }
+    if (ta.hasAttribute('data-rico-baixo')) { ed.classList.add('baixo'); }
+    ed.innerHTML = ta.value;   // o servidor já entregou o texto limpo
+
+    BOTOES.forEach(function (b) {
+      if (b === '|') { var sp = document.createElement('span'); sp.className = 'rico-sep'; sp.setAttribute('aria-hidden', 'true'); barra.appendChild(sp); return; }
+      var bt = document.createElement('button'); bt.type = 'button'; bt.className = 'rico-bt'; bt.title = b[2]; bt.setAttribute('aria-label', b[2]);
+      if (b[4]) { var el = document.createElement(b[4]); el.textContent = b[1]; bt.appendChild(el); } else { bt.textContent = b[1]; }
+      bt.addEventListener('mousedown', function (ev) { ev.preventDefault(); });   // não perde a seleção do texto
+      bt.addEventListener('click', function () {
+        ed.focus();
+        if (b[0] === 'link') {
+          var end = window.prompt('Endereço do link (começa com https://):', 'https://');
+          if (!end) { return; }
+          end = end.trim();
+          if (!/^(https?:\/\/|mailto:)/i.test(end)) { end = 'https://' + end; }
+          document.execCommand('createLink', false, end);
+        } else if (b[0] === 'removeFormat') {
+          document.execCommand('removeFormat'); document.execCommand('formatBlock', false, '<p>');
+        } else {
+          document.execCommand(b[0], false, b[3] || null);
+        }
+      });
+      barra.appendChild(bt);
+    });
+
+    ed.addEventListener('paste', function (ev) {
+      var cd = ev.clipboardData; if (!cd) { return; }
+      ev.preventDefault();
+      var html = cd.getData('text/html');
+      if (html) {
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        document.execCommand('insertHTML', false, limpa(doc.body));
+      } else {
+        document.execCommand('insertText', false, cd.getData('text/plain'));
+      }
+    });
+    ed.addEventListener('keydown', function (ev) {
+      if ((ev.ctrlKey || ev.metaKey) && !ev.shiftKey && ev.key.toLowerCase() === 'k') { ev.preventDefault(); barra.querySelector('[title="Inserir link"]').click(); }
+    });
+
+    ta.hidden = true;
+    ta.parentNode.insertBefore(caixa, ta);
+    caixa.appendChild(barra); caixa.appendChild(ed);
+    var form = ta.form;
+    if (form) {
+      form.addEventListener('submit', function () {
+        var vazio = ed.textContent.trim() === '' && !ed.querySelector('li,br,img');
+        ta.value = vazio ? '' : ed.innerHTML;
+      });
+    }
+  });
+})();

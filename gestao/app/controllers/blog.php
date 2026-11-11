@@ -73,7 +73,8 @@ Router::add('POST', '/blog/ideias/(?P<id>\d+)', function (array $p, array $u) {
     if ($erro) {
         http_response_code(422);
         $i['title'] = (string) ($_POST['title'] ?? '');
-        $i['notes'] = (string) ($_POST['notes'] ?? '');
+        $i['notes'] = (string) RichText::limpar((string) ($_POST['notes'] ?? ''));
+        $i['notes_rich'] = 1;
         $i['_resp'] = array_map('intval', $resp);
         View::render('blog/ideia', ['titulo' => 'Editar ideia', 'i' => $i, 'erros' => [$erro], 'pode_avaliar' => Blog::podeAvaliar($u), 'pode_apagar' => Blog::podeApagar($u), 'pessoas' => array_values(array_filter(Usuarios::todos(true), fn($x) => $x['role'] !== 'externo'))]);
         return;

@@ -100,13 +100,18 @@ $volta = $_SERVER['REQUEST_URI'] ?? '/tarefas';
   <div class="tabela-rolagem">
   <table class="tabela">
     <thead><tr>
-      <th><?= $cab('atividade', 'Atividade') ?></th><th><?= $cab('status', 'Status') ?></th><th><?= $cab('data', 'Data') ?></th>
-      <th>Setor</th><th>Responsável</th><th>Projeto</th><th>Tipo</th><th><?= $cab('prioridade', 'Prioridade') ?></th>
+      <th><?= $cab('atividade', 'Atividade') ?></th><th>Projeto</th><th>Setor</th><th><?= $cab('data', 'Data') ?></th>
+      <th><?= $cab('prioridade', 'Prioridade') ?></th><th>Responsável</th><th><?= $cab('status', 'Status') ?></th><th>Tipo</th>
     </tr></thead>
     <tbody>
     <?php foreach ($linhas as $t): ?>
       <tr>
         <td class="col-titulo"><a href="/tarefas/<?= (int) $t['id'] ?>?<?= e(http_build_query(['volta' => $volta])) ?>"><?= e($t['title']) ?></a></td>
+        <td><?php foreach ($t['projetos'] as $x): ?><?= chip($x['name'], $x['color']) ?> <?php endforeach; ?></td>
+        <td><?php foreach ($t['setores'] as $x): ?><?= chip($x['name'], $x['color']) ?> <?php endforeach; ?></td>
+        <td class="nowrap<?= tarefa_atrasada($t, $hoje) ? ' alerta' : '' ?>"><?= e(data_tarefa($t)) ?></td>
+        <td><?= chip_prioridade($t['priority']) ?></td>
+        <td><?php foreach ($t['responsaveis'] as $pp): ?><span class="pessoa"><?= avatar_html($pp, 'peq') ?><?= e($pp['name']) ?></span> <?php endforeach; ?></td>
         <td>
           <?php if (!$ehExterno): ?>
           <form method="post" action="/tarefas/<?= (int) $t['id'] ?>/status" data-auto>
@@ -117,12 +122,7 @@ $volta = $_SERVER['REQUEST_URI'] ?? '/tarefas';
           </form>
           <?php else: ?><?= chip_status($t['status']) ?><?php endif; ?>
         </td>
-        <td class="nowrap<?= tarefa_atrasada($t, $hoje) ? ' alerta' : '' ?>"><?= e(data_tarefa($t)) ?></td>
-        <td><?php foreach ($t['setores'] as $x): ?><?= chip($x['name'], $x['color']) ?> <?php endforeach; ?></td>
-        <td><?php foreach ($t['responsaveis'] as $pp): ?><span class="pessoa"><?= avatar_html($pp, 'peq') ?><?= e($pp['name']) ?></span> <?php endforeach; ?></td>
-        <td><?php foreach ($t['projetos'] as $x): ?><?= chip($x['name'], $x['color']) ?> <?php endforeach; ?></td>
         <td><?= e($t['type']) ?></td>
-        <td><?= chip_prioridade($t['priority']) ?></td>
       </tr>
     <?php endforeach; ?>
     <?php if (!$linhas): ?><tr><td colspan="8" class="vazio-linha">Nenhuma tarefa encontrada.</td></tr><?php endif; ?>
